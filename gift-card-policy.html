@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Card Policy | Killiney Barbers</title>
+	<meta name="robots" content="noindex, follow">
+	
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .prose h2 { @apply text-3xl mb-4 mt-8; }
+        .prose h3 { @apply text-2xl mb-3 mt-6; }
+        .prose p, .prose li { @apply text-gray-700 leading-relaxed; }
+        .prose a { @apply text-amber-600 underline hover:text-amber-500; }
+        .prose ul { @apply list-disc pl-6; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <a href="/" class="text-3xl font-bold font-display text-gray-900 tracking-tight">Killiney Barbers</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <article class="prose max-w-4xl mx-auto">
+            <h1>Killiney Barbers Gift Card Terms & Conditions</h1>
+            <p class="text-gray-500">Last updated: 27 March 2026</p>
+            
+            <p>The following terms and conditions apply to the purchase and use of Killiney Barbers gift cards.</p>
+
+            <h2>Redemption</h2>
+            <ul>
+                <li>Gift cards can be exchanged for services at Killiney Barbers.</li>
+                <li>Gift cards cannot be used to purchase retail products.</li>
+                <li>Gift cards are non-transferable and can be used as part or full payment for services.</li>
+                <li>No change will be given, but any remaining balance can be left on the card for future purchases.</li>
+                <li>Gift cards cannot be exchanged for cash.</li>
+            </ul>
+
+            <h2>General Terms</h2>
+            <ul>
+                <li>Gift cards are not cheque guarantee, credit, debit or charge cards.</li>
+                <li>Gift cards are valid for 5 years from the date of purchase.</li>
+                <li>Killiney Barbers will not be held liable for cards which have been lost, stolen, or damaged. Please treat your gift card like cash.</li>
+            </ul>
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions regarding your gift card, please contact us:</p>
+            <ul>
+                <li>Email: hello@killineybarbers.ie</li>
+                <li>Phone: (01) 513 6000</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+             <p>&copy; <span id="year"></span> Killiney Barbers. All Rights Reserved.</p>
+             <a href="/privacy-policy.html" class="text-xs text-gray-500 hover:text-amber-500 mt-2 inline-block">Privacy & Cookie Policy</a> | 
+             <a href="/gift-card-policy.html" class="text-xs text-gray-500 hover:text-amber-500 mt-2 inline-block">Gift Card Policy</a>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

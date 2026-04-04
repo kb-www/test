@@ -1,0 +1,9 @@
+/cookie-policy.html /privacy-policy.html 301
+
+/services     /#services   301
+/contact      /#contact    301
+/services/*     /#services   301
+/contact/*      /#contact    301
+/about/*        /            301
+/news/*       /            301
+/gift-card/*    /#gift-card 301

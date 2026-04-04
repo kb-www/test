@@ -1,0 +1,5 @@
+# https://www.killineybarbers.ie
+User-agent: *
+Allow: /
+
+Sitemap: https://www.killineybarbers.ie/sitemap.xml
