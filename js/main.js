@@ -28,31 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.1 });
   fadeSections.forEach(section => sectionObserver.observe(section));
 
-  // Booking Modal Logic
-  const bookingModal = document.getElementById('booking-modal');
-  const openModalButtons = document.querySelectorAll('.js-open-booking-modal');
-  const closeModalButton = document.getElementById('modal-close-button');
-  
-  // DEFINITIVE FIX: This function now handles the timing issue.
-  const openModal = () => {
-    // First, make the modal visible.
-    bookingModal.classList.remove('hidden');
 
-    // Then, use a minimal timeout. This pushes the execution to the next "tick" of the browser's
-    // event loop, ensuring the modal is rendered before the script tries to style it.
-    setTimeout(() => {
-        if (typeof initializeModalDisplay === 'function') {
-            initializeModalDisplay();
-        }
-    }, 0);
-  };
-  
-  const closeModal = () => bookingModal.classList.add('hidden');
-  
-  openModalButtons.forEach(btn => btn.addEventListener('click', openModal));
-  closeModalButton.addEventListener('click', closeModal);
-  bookingModal.addEventListener('click', (e) => { if (e.target === bookingModal) closeModal(); });
-  document.addEventListener('keydown', (e) => { if (e.key === "Escape" && !bookingModal.classList.contains('hidden')) closeModal(); });
 
   // Sticky FAB Logic
   const fabButton = document.getElementById('fab-booking-button');
