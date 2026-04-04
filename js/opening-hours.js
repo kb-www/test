@@ -6,8 +6,8 @@ const hoursData = {
     0: null,              // Sunday: Closed
     1: null,   // Monday: 10 AM - 6 PM
     2: { o: 10, c: 18 },   // Tuesday: 10 AM - 6 PM
-    3: { o: 09, c: 18 },   // Wednesday: 09 AM - 7 PM
-    4: { o: 09, c: 18 },   // Thursday: 9 AM - 6 PM
+    3: { o: 9, c: 18 },   // Wednesday: 09 AM - 7 PM
+    4: { o: 9, c: 18 },   // Thursday: 9 AM - 6 PM
     5: { o: 9, c: 18 },    // Friday: 9 AM - 6 PM
     6: { o: 9, c: 16 }   // Saturday: 9 AM - 4 PM
 };
@@ -248,9 +248,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const openModal = () => {
         bookingModal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
     };
 
-    const closeModal = () => bookingModal.classList.add('hidden');
+    const closeModal = () => {
+        bookingModal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+    };
 
     openModalButtons.forEach(btn => btn.addEventListener('click', openModal));
     closeModalButton.addEventListener('click', closeModal);
