@@ -19,9 +19,9 @@ const overrides = {
 "2025-12-25": { hours: null, reason: "Christmas Day" },
 "2025-12-26": { hours: null, reason: "St. Stephen's Day" },
 "2026-01-01": { hours: null, reason: "New Years Day" },
-"2025-12-22": { hours: { o: 09, c: 18 }, reason: "" },
-"2025-12-23": { hours: { o: 09, c: 18 }, reason: "" },
-    "2025-12-24": { hours: { o: 09, c: 14 }, reason: "Christmas Eve" },
+"2025-12-22": { hours: { o: 9, c: 18 }, reason: "" },
+"2025-12-23": { hours: { o: 9, c: 18 }, reason: "" },
+    "2025-12-24": { hours: { o: 9, c: 14 }, reason: "Christmas Eve" },
 };
 
 // Temporary closures for a date range (e.g., holidays)
@@ -256,8 +256,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('overflow-hidden');
     };
 
+    const modalScroll = document.getElementById('booking-modal-scroll');
     openModalButtons.forEach(btn => btn.addEventListener('click', openModal));
     closeModalButton.addEventListener('click', closeModal);
-    bookingModal.addEventListener('click', (e) => { if (e.target === bookingModal) closeModal(); });
+    // Tap on the dark backdrop (scroll wrapper, not the white card) to close
+    modalScroll.addEventListener('click', (e) => { if (e.target === modalScroll) closeModal(); });
     document.addEventListener('keydown', (e) => { if (e.key === "Escape" && !bookingModal.classList.contains('hidden')) closeModal(); });
 });

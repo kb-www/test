@@ -294,14 +294,14 @@
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-6">
+          <!-- Any Cut, Any Style Card (Featured) - first in DOM so it's top on mobile -->
+          <div class="fade-in-section bg-gray-900 text-white p-8 rounded-xl shadow-2xl scale-105 relative overflow-hidden group md:order-2"><div class="absolute -top-2 -right-2 bg-amber-500 text-gray-900 text-sm font-bold px-4 py-1 rounded-bl-lg">Most Popular</div><i data-lucide="scissors" class="w-12 h-12 text-amber-500 mx-auto mb-4"></i><h3 class="text-2xl font-bold mb-2">Any Cut, Any Style</h3><p class="text-5xl font-extrabold mb-4 text-amber-500">€23</p><p class="opacity-90">From a classic scissor cut to a modern skin fade, our experts craft the perfect look for you.</p><button class="js-open-booking-modal inline-block mt-6 bg-amber-500 text-gray-900 font-bold py-2 px-6 rounded-md hover:bg-amber-400 group-hover:scale-105 transition-all duration-300">Book Your Cut</button></div>
+
           <!-- Cut & Beard Trim Card -->
-          <div class="fade-in-section bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"><i data-lucide="combine" class="w-12 h-12 text-amber-500 mx-auto mb-4"></i><h3 class="text-2xl font-bold mb-2">Cut & Beard Trim</h3><p class="text-5xl font-extrabold text-gray-900 mb-4">€33</p><p class="text-gray-600">The ultimate grooming package. A precision haircut followed by a sharp beard trim and shape-up.</p></div>
-          
-          <!-- Any Cut, Any Style Card (Featured) -->
-          <div class="fade-in-section bg-gray-900 text-white p-8 rounded-xl shadow-2xl scale-105 relative overflow-hidden group"><div class="absolute -top-2 -right-2 bg-amber-500 text-gray-900 text-sm font-bold px-4 py-1 rounded-bl-lg">Most Popular</div><i data-lucide="scissors" class="w-12 h-12 text-amber-500 mx-auto mb-4"></i><h3 class="text-2xl font-bold mb-2">Any Cut, Any Style</h3><p class="text-5xl font-extrabold mb-4 text-amber-500">€23</p><p class="opacity-90">From a classic scissor cut to a modern skin fade, our experts craft the perfect look for you.</p><button class="js-open-booking-modal inline-block mt-6 bg-amber-500 text-gray-900 font-bold py-2 px-6 rounded-md hover:bg-amber-400 group-hover:scale-105 transition-all duration-300">Book Your Cut</button></div>
-          
+          <div class="fade-in-section bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 md:order-1"><i data-lucide="combine" class="w-12 h-12 text-amber-500 mx-auto mb-4"></i><h3 class="text-2xl font-bold mb-2">Cut & Beard Trim</h3><p class="text-5xl font-extrabold text-gray-900 mb-4">€33</p><p class="text-gray-600">The ultimate grooming package. A precision haircut followed by a sharp beard trim and shape-up.</p></div>
+
           <!-- Beard Trim Card -->
-          <div class="fade-in-section bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"><i data-lucide="user-round" class="w-12 h-12 text-amber-500 mx-auto mb-4"></i><h3 class="text-2xl font-bold mb-2">Beard Trim</h3><p class="text-5xl font-extrabold text-gray-900 mb-4">€15</p><p class="text-gray-600">Keep your beard in impeccable shape with a professional trim, line-up, and optional conditioning.</p></div>
+          <div class="fade-in-section bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 md:order-3"><i data-lucide="user-round" class="w-12 h-12 text-amber-500 mx-auto mb-4"></i><h3 class="text-2xl font-bold mb-2">Beard Trim</h3><p class="text-5xl font-extrabold text-gray-900 mb-4">€15</p><p class="text-gray-600">Keep your beard in impeccable shape with a professional trim, line-up, and optional conditioning.</p></div>
         </div>
         
         <div class="fade-in-section mt-20 max-w-2xl mx-auto bg-gray-800 text-gray-100 p-6 rounded-xl shadow-lg border-2 border-dashed border-amber-400">
@@ -472,8 +472,11 @@
   <button id="fab-booking-button" class="js-open-booking-modal hidden fixed bottom-6 right-6 bg-amber-500 text-gray-900 w-16 h-16 rounded-full shadow-xl flex items-center justify-center transform hover:scale-110 transition-all duration-300 z-30"><i data-lucide="calendar-plus" class="w-8 h-8"></i><span class="sr-only">Book an Appointment</span></button>
 
   <!-- Booking Modal -->
-  <div id="booking-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm p-4 sm:p-6">
-    <div id="booking-modal-content" class="bg-white rounded-xl shadow-2xl w-full max-w-md p-6 relative mx-auto mt-4 sm:mt-10 mb-4 sm:mb-10">
+  <!-- Outer: fixed backdrop, no scroll -->
+  <div id="booking-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm">
+    <!-- Inner: this element handles all scrolling on iOS and desktop -->
+    <div id="booking-modal-scroll" class="absolute inset-0 overflow-y-auto p-4 sm:p-6" style="-webkit-overflow-scrolling: touch;">
+    <div id="booking-modal-content" class="bg-white rounded-xl shadow-2xl w-full max-w-md p-6 relative mx-auto my-4 sm:my-10">
       <button id="modal-close-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors"><i data-lucide="x" class="w-6 h-6"></i><span class="sr-only">Close</span></button>
       <h2 class="section-heading text-4xl md:text-5xl text-center mb-4">Book Your Appointment</h2>
 
@@ -517,7 +520,8 @@
           </div>
       </div>
     </div>
-  </div>
+    </div><!-- end booking-modal-scroll -->
+  </div><!-- end booking-modal -->
 
   <!-- Cookie Consent Banner -->
   <div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 flex items-center justify-center flex-wrap gap-x-4 gap-y-2 z-50 transition-transform duration-500 translate-y-full">
