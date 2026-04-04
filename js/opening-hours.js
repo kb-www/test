@@ -248,12 +248,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const openModal = () => {
         bookingModal.classList.remove('hidden');
-        document.body.classList.add('overflow-hidden');
     };
 
     const closeModal = () => {
         bookingModal.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
     };
 
     const modalScroll = document.getElementById('booking-modal-scroll');
