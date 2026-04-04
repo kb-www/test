@@ -237,7 +237,7 @@ function initializeMainDisplay() {
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeMainDisplay();
-    initializeModalDisplay(); // Pre-render immediately so there's no delay when modal opens
+    initializeModalDisplay();
     setInterval(initializeMainDisplay, 60000);
     setInterval(initializeModalDisplay, 60000);
 
