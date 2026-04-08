@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  lucide.createIcons();
+  setTimeout(() => {
+    lucide.createIcons();
+  }, 0);
   document.getElementById('year').textContent = new Date().getFullYear();
 
   // Mobile Menu

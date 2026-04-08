@@ -220,7 +220,7 @@ function initializeModalDisplay() {
         listEl: document.getElementById('opening-hours-modal'),
         statusEl: document.getElementById('open-status-modal'),
         noticesEl: document.getElementById('hours-notices-modal'),
-        theme: { todayColor: 'text-amber-400', openColor: 'text-green-500', closedColor: 'text-red-500' }
+        theme: { todayColor: 'text-amber-600', openColor: 'text-green-500', closedColor: 'text-red-500' }
     };
     setupOpeningHours(modalConfig);
 }
