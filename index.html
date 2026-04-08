@@ -37,7 +37,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Roboto:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Roboto:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Roboto:wght@400;500;700&display=swap"></noscript>
   
   <!-- Lucide Icons v0.544.0 (self-hosted; matches unpkg bundle) -->
   <script src="/js/lucide.min.js" defer></script>
@@ -202,7 +204,8 @@
     .section-subheading { font-size: 1.125rem; line-height: 1.75rem; color: #4b5563; max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
     @media (min-width: 640px) {
         .sm\:max-w-md { max-width: 28rem !important; }
-        .sm\:items-center { align-items: center !important; }
+        .sm\:items-start { align-items: flex-start !important; }
+        .sm\:pt-12 { padding-top: 3rem !important; }
         .sm\:rounded-2xl { border-radius: 1rem !important; }
         .sm\:p-4 { padding: 1rem !important; }
         .sm\:my-8 { margin-top: 2rem !important; margin-bottom: 2rem !important; }
@@ -465,7 +468,7 @@
       <strong>Ballybrack</strong>, <strong>Glenageary</strong>, <strong>Dalkey</strong>, <strong>Sallynoggin</strong>, <strong>Cabinteely</strong>, and
       <strong>Dun Laoghaire</strong>. Whether you're local or visiting nearby, walk in, book online, or call ahead for a precision cut and friendly service.
     </p>
-    <p class="text-amber-500 font-bold">Any Cut, Any Style – €23 | Seniors & Junior (Under 10) (Mon–Thu) – €20</p>
+    <p class="text-amber-700 font-bold">Any Cut, Any Style – €23 | Seniors & Junior (Under 10) (Mon–Thu) – €20</p>
   </div>
 </section>
   
@@ -498,7 +501,7 @@
         <div id="booking-modal-content" class="relative w-full overflow-hidden bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-md rounded-t-3xl sm:rounded-2xl" style="transform: translateZ(0);">
           
           <!-- Sticky Header -->
-          <div class="px-6 py-4 border-b border-gray-100 bg-white/90 backdrop-blur-md sticky top-0 z-10 flex items-center justify-between">
+          <div class="px-6 py-4 border-b border-gray-100 bg-white/90 backdrop-blur-md sticky top-0 z-10 flex items-center justify-between" style="border-top-left-radius: inherit; border-top-right-radius: inherit;">
             <h2 id="modal-title" class="text-2xl font-bold text-gray-900 font-display">Book Appointment</h2>
             <button id="modal-close-button" class="text-gray-400 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 rounded-full p-2 transition-colors">
               <i data-lucide="x" class="w-5 h-5"></i><span class="sr-only">Close</span>
