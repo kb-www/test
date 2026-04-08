@@ -34,6 +34,9 @@
   <!-- Tailwind CSS -->
   <link rel="stylesheet" href="/css/style.css">
 
+  <!-- Preload Critical LCP Assets -->
+  <link rel="preload" as="image" href="/images/killiney-barbers-tools.webp">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -210,6 +213,15 @@
         .sm\:p-4 { padding: 1rem !important; }
         .sm\:my-8 { margin-top: 2rem !important; margin-bottom: 2rem !important; }
     }
+    
+    /* Bulletproof Modal CSS for Desktop & Mobile */
+    #booking-modal-scroll { display: flex; align-items: flex-end; justify-content: center; padding: 0; }
+    #booking-modal-content { width: 100%; max-width: 448px; border-radius: 1.5rem 1.5rem 0 0; background: white; overflow: hidden; transform: translateZ(0); margin-top: 2.5rem; }
+    @media (min-width: 640px) {
+        #booking-modal-scroll { align-items: center; padding: 2rem; }
+        #booking-modal-content { border-radius: 1rem; margin-top: auto; margin-bottom: auto; }
+    }
+    
     @media (min-width: 768px) {
         .section-heading { margin-bottom: 2rem; }
         .md\:order-1 { order: 1; }
@@ -492,13 +504,11 @@
     <div class="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity" aria-hidden="true"></div>
     
     <!-- Full screen scroll wrapper -->
-    <div id="booking-modal-scroll" class="fixed inset-0 z-50 overflow-y-auto w-full" style="-webkit-overflow-scrolling: touch;">
-      <!-- Min-height wrapper ensures flexbox centering algorithm respects top margins -->
-      <div class="flex min-h-full items-end justify-center px-0 pb-0 pt-10 text-center sm:items-start sm:p-4 sm:pt-12">
+      <!-- Structural wrapper -->
+      <div id="booking-modal-scroll" class="fixed inset-0 z-50 overflow-y-auto w-full" style="-webkit-overflow-scrolling: touch;">
         
         <!-- Modal Card -->
-        <!-- desktop limits specifically applied via style tags locally if responsive classes fail -->
-        <div id="booking-modal-content" class="relative w-full overflow-hidden bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-md rounded-t-3xl sm:rounded-2xl" style="transform: translateZ(0);">
+        <div id="booking-modal-content" class="relative text-left shadow-2xl transition-all">
           
           <!-- Sticky Header -->
           <div class="px-6 py-4 border-b border-gray-100 bg-white/90 backdrop-blur-md sticky top-0 z-10 flex items-center justify-between" style="border-top-left-radius: inherit; border-top-right-radius: inherit;">
@@ -547,7 +557,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <!-- Cookie Consent Banner -->
   <div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 flex items-center justify-center flex-wrap gap-x-4 gap-y-2 z-50 transition-transform duration-500 translate-y-full">
