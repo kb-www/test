@@ -34,9 +34,6 @@
   <!-- Tailwind CSS -->
   <link rel="stylesheet" href="/css/style.css">
 
-  <!-- Preload Critical LCP Assets -->
-  <link rel="preload" as="image" href="/images/killiney-barbers-tools.webp">
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -214,13 +211,9 @@
         .sm\:my-8 { margin-top: 2rem !important; margin-bottom: 2rem !important; }
     }
     
-    /* Bulletproof Modal CSS for Desktop & Mobile */
-    #booking-modal-scroll { display: flex; align-items: flex-end; justify-content: center; padding: 0; }
-    #booking-modal-content { width: 100%; max-width: 448px; border-radius: 1.5rem 1.5rem 0 0; background: white; overflow: hidden; transform: translateZ(0); margin-top: 2.5rem; }
-    @media (min-width: 640px) {
-        #booking-modal-scroll { align-items: center; padding: 2rem; }
-        #booking-modal-content { border-radius: 1rem; margin-top: auto; margin-bottom: auto; }
-    }
+    /* Pure Floating Centered Modal - No Edge Docking */
+    #booking-modal-scroll { display: flex; align-items: flex-start; justify-content: center; padding: 1.5rem; min-height: 100vh; }
+    #booking-modal-content { width: 100%; max-width: 440px; border-radius: 1.25rem; background: white; overflow: hidden; transform: translateZ(0); margin: auto; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); }
     
     @media (min-width: 768px) {
         .section-heading { margin-bottom: 2rem; }
