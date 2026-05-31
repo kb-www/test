@@ -201,6 +201,14 @@
 "@type": "Answer",
 "text": "We are located at 2B Killiney Shopping Centre, Rochestown Avenue, Dun Laoghaire, Co. Dublin, A96 A528"
 }
+},
+{
+"@type": "Question",
+"name": "Is Killiney Barbers a family-friendly and family-run barbershop?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Absolutely! Killiney Barbers is a proud, family-run, family-friendly local barbershop in South Dublin welcoming all generations—from toddlers getting their very first haircut to kids, teens, dads, and granddads. We do your hair, your way, in a warm, welcoming community atmosphere with high-energy friendly service."
+}
 }
 ]
 }
@@ -460,13 +468,32 @@
       </div>
     </section>
 
+    <!-- Community Broadcast Bar -->
+    <div class="bg-amber-500 text-gray-950 font-bold py-4 overflow-hidden relative shadow-md">
+      <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+        <div class="flex items-center justify-center md:justify-start gap-3 flex-wrap md:flex-nowrap">
+          <span class="flex h-3 w-3 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-600 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
+          </span>
+          <span class="uppercase tracking-widest text-xs bg-red-600 text-white px-2 py-0.5 rounded font-black animate-pulse">Live from the Shop</span>
+          <p class="text-sm md:text-base leading-tight">
+            🎙️ <strong class="font-extrabold">ROCHESTOWN AVENUE'S OWN:</strong> Killiney Barbers is South Dublin's proud, family-run, family-friendly hub! Dads, lads, granddads, & little ones—your hair, your way!
+          </p>
+        </div>
+        <div class="flex items-center gap-2 text-xs md:text-sm uppercase tracking-wider font-extrabold bg-gray-900 text-amber-400 py-1.5 px-4 rounded-full border border-amber-400">
+          📻 Tuning in from Ballybrack to Dalkey!
+        </div>
+      </div>
+    </div>
+
     <!-- Services Section -->
     <section id="services" class="py-24 bg-white">
       <div class="container mx-auto px-6 text-center">
         <div class="fade-in-section">
-          <h2 class="section-heading text-4xl md:text-5xl">Our Expert Services</h2>
+          <h2 class="section-heading text-4xl md:text-5xl">Your Hair, Your Way!</h2>
           <p class="section-subheading">
-            Simple, transparent pricing. Expert results on every visit — no surprises, just great barbering.
+            South Dublin's friendly, family-run home for premium cuts! Dads, lads, granddads, and toddlers—no fuss, just high-energy local vibes and top-tier styles for the whole family.
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-6">
@@ -477,8 +504,7 @@
               Most Popular</div><i data-lucide="scissors" class="w-12 h-12 text-amber-500 mx-auto mb-4"></i>
             <h3 class="text-2xl font-bold mb-2">Haircut</h3>
             <p class="text-5xl font-extrabold mb-4 text-amber-500">€25</p>
-            <p class="opacity-90 mb-3">From a classic scissor cut to a modern skin fade, our experts craft the perfect look
-              for you.</p>
+            <p class="opacity-90 mb-3">Classic scissor cuts, sharp skin fades, or a quick school-ready trim—our local experts listen to exactly what you want and deliver a look that makes you feel amazing!</p>
             <p class="text-amber-400 font-semibold text-sm mb-4">Add a beard trim to any cut for just €10.</p>
             <button
               class="js-open-booking-modal inline-block bg-amber-500 text-gray-900 font-bold py-2 px-6 rounded-md hover:bg-amber-400 group-hover:scale-105 transition-all duration-300">Book
@@ -491,7 +517,7 @@
             <i data-lucide="combine" class="w-12 h-12 text-amber-500 mx-auto mb-4"></i>
             <h3 class="text-2xl font-bold mb-2">Cut & Beard Trim</h3>
             <p class="text-5xl font-extrabold text-gray-900 mb-4">€35</p>
-            <p class="text-gray-600">The complete package. A precision haircut plus a sharp beard trim and shape-up.</p>
+            <p class="text-gray-600">Our signature local favorite! Get a precision cut tailored to you plus a sharp, symmetrical beard trim and shape-up. Walk out ready for anything.</p>
           </div>
 
           <!-- Beard Trim Card -->
@@ -500,8 +526,7 @@
             <i data-lucide="user-round" class="w-12 h-12 text-amber-500 mx-auto mb-4"></i>
             <h3 class="text-2xl font-bold mb-2">Beard Trim</h3>
             <p class="text-5xl font-extrabold text-gray-900 mb-4">€15</p>
-            <p class="text-gray-600">Keep your beard in impeccable shape with a professional trim, line-up, and optional
-              conditioning.</p>
+            <p class="text-gray-600">Keep your beard clean and perfectly contoured. Professional line-up, custom trim, and premium beard oil conditioning to keep you looking your best.</p>
           </div>
         </div>
 
@@ -511,8 +536,7 @@
             <i data-lucide="sparkles" class="w-6 h-6 text-amber-400"></i>
             <h4 class="font-bold text-xl text-amber-400">Midweek Special</h4>
           </div>
-          <p class="text-center text-gray-300">Monday to Thursday: Seniors (65+) & Junior (Under 10) – €20 (excludes
-            skin fades).</p>
+          <p class="text-center text-gray-300">Family time at Killiney Barbers! Monday to Thursday: Seniors (65+) & Juniors (Under 10) are just €20. (Classic cuts only, excludes skin fades).</p>
         </div>
 
       </div>
@@ -621,32 +645,28 @@
             alt="The friendly team of expert barbers at Killiney Barbers" width="1200" height="800" loading="lazy"
             class="w-full h-full object-cover"></div>
         <div class="fade-in-section">
-          <h2 class="section-heading text-4xl md:text-5xl">More Than a Haircut.<br>It's a Tradition.</h2>
-          <p class="text-gray-600 mb-6 leading-relaxed">At Killiney Barbers, we believe a great haircut is a form of
-            self-care. We've built a modern space for men who appreciate high-quality barbering in a relaxed, welcoming
-            atmosphere. Our expert barbers are masters of their craft, dedicated to making you look and feel your
-            absolute best.</p>
+          <h2 class="section-heading text-4xl md:text-5xl">Your Hair, Your Way.<br>A Barbershop for the Whole Family!</h2>
+          <p class="text-gray-600 mb-6 leading-relaxed">Killiney Barbers is South Dublin’s proud, family-run community hub. We don’t believe in assembly-line haircuts—this is your chair, and we do your hair, your way! Dads, lads, granddads, and the little ones are all part of our neighborhood family. Pop in, enjoy our friendly chat and high-energy local atmosphere, and walk out looking sharp and feeling amazing.</p>
           <ul class="space-y-4">
             <li class="flex items-start"><i data-lucide="check"
                 class="w-6 h-6 mr-3 text-amber-500 flex-shrink-0 mt-1"></i>
               <div>
-                <h3 class="font-bold">Master Barbers</h3>
-                <p class="text-gray-600">A team of skilled professionals passionate about their craft.</p>
+                <h3 class="font-bold">Friendly Local Experts</h3>
+                <p class="text-gray-600">A passionate team of master barbers who listen closely to give you exactly the style you want.</p>
               </div>
             </li>
             <li class="flex items-start"><i data-lucide="parking-circle"
                 class="w-6 h-6 mr-3 text-amber-500 flex-shrink-0 mt-1"></i>
               <div>
-                <h3 class="font-bold">Hassle-Free Parking</h3>
-                <p class="text-gray-600">Located in Killiney Shopping Centre with ample free parking.</p>
+                <h3 class="font-bold">Hassle-Free Family Parking</h3>
+                <p class="text-gray-600">Conveniently located in Killiney Shopping Centre with plenty of free parking—perfect for bringing the whole family.</p>
               </div>
             </li>
             <li class="flex items-start"><i data-lucide="book-marked"
                 class="w-6 h-6 mr-3 text-amber-500 flex-shrink-0 mt-1"></i>
               <div>
-                <h3 class="font-bold">Book online or walk in</h3>
-                <p class="text-gray-600">Our new booking site lets you pick your time in a few taps; walk-ins are always
-                  welcome too—come in during opening hours and we’ll look after you.</p>
+                <h3 class="font-bold">Walk-Ins & Easy Bookings</h3>
+                <p class="text-gray-600">Book online in seconds, call our shop directly, or just stroll on in—we will always find a chair and a warm welcome for you!</p>
               </div>
             </li>
           </ul>
@@ -717,6 +737,19 @@
             </summary>
             <div class="px-6 pb-6 text-gray-600 leading-relaxed">
               We are located at 2B Killiney Shopping Centre, Rochestown Avenue, Dun Laoghaire, Co. Dublin, A96 A528
+            </div>
+          </details>
+
+          <details
+            class="group border border-gray-200 rounded-lg bg-gray-50 [&_summary::-webkit-details-marker]:hidden fade-in-section"
+            style="transition-delay: 400ms;">
+            <summary
+              class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-gray-900 text-lg font-bold">
+              Is Killiney Barbers a family-friendly and family-run barbershop?
+              <i data-lucide="chevron-down" class="w-6 h-6 transition duration-300 group-open:-rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+              Absolutely! Killiney Barbers is a proud, family-run, family-friendly local barbershop in South Dublin welcoming all generations—from toddlers getting their very first haircut to kids, teens, dads, and granddads. We do your hair, your way, in a warm, welcoming community atmosphere with high-energy friendly service.
             </div>
           </details>
         </div>
