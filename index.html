@@ -434,6 +434,20 @@
         transform: translate(-50%, -50%) rotate(360deg);
       }
     }
+
+    /* Pulse Glow Animation for CTA Buttons */
+    .btn-pulse-glow {
+      animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% {
+        box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.4), 0 2px 4px -1px rgba(245, 158, 11, 0.2), 0 0 0 0px rgba(245, 158, 11, 0.4);
+      }
+      50% {
+        box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3), 0 4px 6px -2px rgba(245, 158, 11, 0.15), 0 0 0 8px rgba(245, 158, 11, 0);
+      }
+    }
   </style>
 </head>
 
@@ -462,7 +476,7 @@
       </nav>
       <div class="flex items-center space-x-4">
         <button
-          class="js-open-booking-modal hidden sm:block bg-amber-500 text-gray-900 font-bold py-2 px-6 rounded-md hover:bg-amber-400 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+          class="js-open-booking-modal hidden sm:block bg-amber-500 text-gray-900 font-bold py-2 px-6 rounded-md hover:bg-amber-400 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:scale-105 btn-pulse-glow">
           Book Now
         </button>
         <button id="mobile-menu-button" aria-label="Toggle mobile menu"
@@ -920,7 +934,7 @@
 
   <!-- Floating Action Button for Booking -->
   <button id="fab-booking-button"
-    class="js-open-booking-modal hidden fixed bottom-6 right-6 bg-amber-500 text-gray-900 w-16 h-16 rounded-full shadow-xl flex items-center justify-center transform hover:scale-110 transition-all duration-300 z-30"><i
+    class="js-open-booking-modal hidden fixed bottom-6 right-6 bg-amber-500 text-gray-900 w-16 h-16 rounded-full shadow-xl flex items-center justify-center transform hover:scale-110 transition-all duration-300 z-30 btn-pulse-glow"><i
       data-lucide="calendar-plus" class="w-8 h-8"></i><span class="sr-only">Book an Appointment</span></button>
 
   <!-- Booking Modal (Redesigned as Mobile Bottom-Sheet) -->
